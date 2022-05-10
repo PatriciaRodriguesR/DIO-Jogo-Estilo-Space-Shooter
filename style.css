@@ -1,0 +1,123 @@
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: black;
+}
+
+#main-play-area {
+  background-color: black;
+  background-image: url(img/space.png);
+  background-repeat: repeat-x;
+  animation: slideright 75000s infinite linear;
+  -webkit-animation: slideright 75000s infinite linear;
+  height: 600px;
+  width: 600px;
+}
+
+@keyframes slideright {
+  from {
+    background-position: 70000%;
+  }
+  to {
+    background-position: 0%;
+  }
+}
+
+.game-instructions {
+  position: relative;
+  color: white;
+  left: 7rem;
+  top: 0px;
+}
+
+.start-button {
+  position: relative;
+  color: white;
+  top: 9rem;
+  left: 15rem;
+  cursor: pointer;
+}
+
+.player-shooter {
+  position: relative;
+  height: 60px;
+  width: 70px;
+  left: 20px;
+  top: 250px;
+}
+
+.laser {
+  position: relative;
+  width: 40px;
+  height: 30px;
+}
+
+.alien {
+  height: 60px;
+  width: 70px;
+  position: relative;
+}
+
+.alien-transition {
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.dead-alien {
+  height: 60px;
+  width: 70px;
+  position: relative;
+  opacity: 0;
+}
+
+#score {
+  color: white;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  font-size: 18px;
+}
+
+#boxEnd {
+  display: none;
+  position: absolute;
+  left: calc(50% - 181px);
+  top: calc(50% - 40px);
+}
+
+#gameOver {
+  font-size: 70px;
+  color: white;
+  width: 362px;
+  height: 80px;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  border-radius: 0.5rem;
+  font-size: 18px;
+  background: #f8f8f8;
+  cursor: pointer;
+  margin-left: 190px;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.btn1 {
+  border-color: #2271b3;
+  color: #000;
+  box-shadow: 0 0 40px 40px #2271b3 inset, 0 0 0 0 #2271b3;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+.btn1:hover {
+  box-shadow: 0 0 10px 0 #89b6e7 inset, 0 0 10px 4px #89b6e7;
+}
